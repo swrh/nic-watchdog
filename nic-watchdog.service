@@ -1,0 +1,14 @@
+[Unit]
+Description=NIC watchdog (r8169 silent-hang recovery) for enp6s0
+After=network.target
+
+[Service]
+Type=simple
+# Path is a placeholder: point it at wherever this repo ends up living on
+# the target box (e.g. a checkout under /opt, or a symlink into /usr/local).
+ExecStart=/usr/bin/env python3 /path/to/nic-watchdog/nic_watchdog.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
