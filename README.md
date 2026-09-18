@@ -52,7 +52,7 @@ Package versions follow Debian's `<upstream_version>-<package_revision>` convent
 
 1. **`scripts/build-deb.sh <version> <arch> [package_revision]`** stages `/usr/bin/nic-watchdog`, `/lib/systemd/system/nic-watchdog.service`, renders `debian/control.template` and changelog, and runs `dpkg-deb --root-owner-group --build` inside a `debian:13` Docker container. It works from macOS or Linux without local Debian packaging tools.
 2. **`scripts/test-deb.sh <deb> <version>`** installs the built package in a distro container, verifies `nic-watchdog --help`, verifies systemd unit file presence, validates `dpkg` metadata, and confirms complete uninstall.
-3. **`.github/workflows/release.yml`** builds `.deb` packages for `amd64` and `arm64`, runs tests in containers across Ubuntu (22.04, 24.04, 26.04) and Debian (11, 12, 13) using QEMU, and publishes GitHub releases when git tags `v*` are pushed or via `workflow_dispatch`.
+3. **`.github/workflows/release.yml`** builds `.deb` packages for `amd64` and `arm64`, runs tests in containers across Ubuntu (22.04, 24.04, 26.04) and Debian (12, 13) using QEMU, and publishes GitHub releases when git tags `v*` are pushed or via `workflow_dispatch`.
 
 ## Manual install
 
