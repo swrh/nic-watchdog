@@ -1,0 +1,12 @@
+Package: nic-watchdog
+Version: __VERSION__
+Section: net
+Priority: optional
+Architecture: __ARCH__
+Installed-Size: __INSTALLED_SIZE__
+Maintainer: Fernando Silveira <fsilveira@gmail.com>
+Homepage: https://github.com/swrh/nic-watchdog
+Depends: python3, iproute2, iputils-ping, kmod
+Description: Self-healing watchdog for r8169 silent-hang recovery
+ Self-healing watchdog daemon for the r8169 silent-hang bug, monitoring
+ network reachability and automatically recovering wedged network interfaces.

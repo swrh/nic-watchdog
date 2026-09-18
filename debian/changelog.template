@@ -1,0 +1,5 @@
+nic-watchdog (__VERSION__) unstable; urgency=medium
+
+  * Packaging for nic-watchdog __UPSTREAM_TAG__ (__ARCH__).
+
+ -- Fernando Silveira <fsilveira@gmail.com>  __DATE__
